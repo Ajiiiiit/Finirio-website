@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finirio Technologies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+  <div class="logo">
+    <img src="FINIRIO LOGO.png" alt="Finirio Logo">
+  </div>
+  <nav>
+    <a href="#know-more">About</a>
+    <a href="#services">Services</a>
+    <a href="#emi">EMI Calculator</a>
+    <a href="#contact" class="btn">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Your Path to Financial Independence</h1>
+   
+    <button onclick="document.getElementById('know-more').scrollIntoView({behavior:'smooth'})">
+
+
+      Know More
+    </button>
+  </div>
+  <div class="hero-img">
+    <img src="backside.webp">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="know-more" class="know-more">
+  <h2>Your Trusted Partner in Financial Freedom</h2>
+  
+  <p>Finirio Technologies is a leading financial consulting firm specializing in housing, personal, and business loans.</p>
+
+  <div class="stats">
+    <div class="stat"><h3>₹6000+ Cr</h3><p>Loans Disbursed</p></div>
+    <div class="stat"><h3>5000+</h3><p>Happy Clients</p></div>
+    <div class="stat"><h3>4</h3><p>Mumbai Branches</p></div>
+  </div>
+
+  <p class="highlight"><strong>Customer-first approach with free doorstep assistance</strong>.</p>
+</section>
+
+<!-- BANKS -->
+<section class="banks-network">
+  <h2>Our Banking Network</h2>
+
+<div class="bank-group">
+  <h2>National Banks</h2>
+
+  <div class="logos">
+ <!-- NATIONAL  BANKS -->
+<div class="bank-group">
+
+    <div class="logos">
+   <img src="bank images/BOB N.png" alt="BOB N">
+    <img src="bank images/Canara Bank N.png" alt="Canara Bank N">
+    <img src="bank images/Indsland bank N.png" alt="Indusland bank N">
+    <img src="bank images/Saraswat bank N.png" alt="Saraswat bank N">
+    <img src="bank images/Union bank N.png" alt="Union bank N">
+
+    </div>
+  </div>
+
+<!-- PRIVATE SECTOR BANKS -->
+<div class="bank-group">
+  <h2>Private Sector Banks (Maharashtra)</h2>
+
+  <div class="logos">
+ <!-- PRIVATE SECTOR BANKS -->
+<div class="bank-group">
+
+  <div class="logos">
+    <img src="bank images/axis bank.png" alt="Axis Bank">
+    <img src="bank images/HDFC bank.png" alt="HDFC Bank">
+    <img src="bank images/ICICI bank.png" alt="ICICI Bank">
+    <img src="bank images/kotak bank.png" alt="Kotak Mahindra Bank">
+    <img src="bank images/yes bank.png" alt="YES Bank">
+    <img src="bank images/Baroda bank.png" alt="Baroda bank">
+
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<!-- SERVICES SECTION -->
+<section id="services" class="services-modern">
+  <div class="services-header">
+    <h2>Our Services</h2>
+  </div>
+
+  <div class="services-bg">
+    <div class="services-cards">
+
+      <div class="service-card">
+        <img src="loan image.jpg">
+        <h3>Loans</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="investment.jpg">
+        <h3>Investments</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="debt management.png">
+        <h3>Debt Management</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="home.jpg">
+        <h3>Home Search</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- HOW IT WORKS (ICON STYLE) -->
+<section class="how-it-works">
+  <h2>How it works</h2>
+
+  <div class="how-cards">
+    <div class="how-card">
+      <img src="Eligibility.webp">
+      <h3>Check Eligibility</h3>
+      <p>Check your eligibility for a loan</p>
+    </div>
+
+    <div class="how-card">
+      <img src="submit application.webp">
+      <h3>Submit Application</h3>
+      <p>Complete a 100% application form & document collection at your doorstep</p>
+    </div>
+
+    <div class="how-card">
+      <img src="sanction.webp">
+      <h3>Get Sanctioned</h3>
+      <p>We will evaluate your application and propose a fair sanction</p>
+    </div>
+
+    <div class="how-card">
+      <img src="received payment.webp">
+      <h3>Receive Funds</h3>
+      <p>Receive your loan within 7 days</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- EMI -->
+<section id="emi" class="emi">
+  <h2>EMI Calculator</h2>
+  <div class="emi-box">
+    <input id="loan" type="number" placeholder="Loan Amount ₹">
+    <input id="rate" type="number" placeholder="Interest Rate %">
+    <input id="time" type="number" placeholder="Tenure (Years)">
+    <button onclick="calculateEMI()">Calculate EMI</button>
+    <h3 id="emiResult"></h3>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: support@finirio.com</p>
+  <p>Phone: +91 9XXXXXXXXX</p>
+</section>
+
+<footer>© 2026 Finirio Technologies. All Rights Reserved.</footer>
+
+<script>
+function calculateEMI() {
+  const P = loan.value;
+  const R = rate.value / 12 / 100;
+  const N = time.value * 12;
+
+  if(P && R && N){
+    const emi = (P * R * Math.pow(1+R,N)) / (Math.pow(1+R,N)-1);
+    emiResult.innerText = "Monthly EMI: ₹" + emi.toFixed(2);
+  } else {
+    emiResult.innerText = "Please fill all fields";
+  }
+}
+</script>
+
+</body>
+</html>
